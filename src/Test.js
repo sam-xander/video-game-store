@@ -25,16 +25,17 @@ function Test() {
         <input onChange={handleChange} value={input} type="text" />
         <button type="submit">Search</button>
       </form>
-      <div style={{ display: "grid" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {data.map((game) => (
           <a
             href="/"
             style={{
               background: `url(${game.background_image})`,
               padding: "20px",
-              height: "200px",
+              height: "100px",
+              width: "200px",
+              borderRadius: "16px",
             }}
-            href="#"
             key={game.id}
           >
             {game.name}
