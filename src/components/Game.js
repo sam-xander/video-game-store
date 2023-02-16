@@ -1,6 +1,5 @@
-function Game (){
-    //return ();
-    
-    }
-    
-    export default Game;
+function Game() {
+  //return ();
+}
+
+export default Game;

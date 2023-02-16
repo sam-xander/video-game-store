@@ -61,13 +61,22 @@ h6 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: center;
 }
 
 .sidebar__logo {
   font-size: 1.5rem;
   height: 80px;
-  line-height: 1.1;
+  display: grid;
+  place-content: center;
+}
+
+.sidebar__logo span {
+  height: 20px;
+}
+
+.sidebar__logo span:last-child {
+  color: #de7755;
+  font-size: 1.9rem;
 }
 
 .sidebar__nav {
