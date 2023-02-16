@@ -1,0 +1,80 @@
+/* TODO: Add global styles to Main App.css */
+
+.button {
+  background-color: #de7755;
+  border-radius: 8px;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  height: 48px;
+  transition: filter 100ms ease-in-out;
+}
+.button:hover {
+  filter: brightness(1.1);
+}
+
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.game__header {
+  border-radius: 8px;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.game__body {
+  display: flex;
+}
+
+.game__about {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  gap: 0.4rem;
+}
+
+.game__about h3 {
+  opacity: 90%;
+}
+
+.game__about p {
+  opacity: 80%;
+}
+
+.game__info {
+  display: grid;
+  min-width: 250px;
+  max-width: 250px;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  border-left: 1px solid rgba(230, 230, 230, 0.05);
+}
+
+.game__infoItem {
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .game__body {
+    flex-direction: column;
+  }
+
+  .game__about {
+    margin-top: 2rem;
+  }
+
+  .game__info {
+    margin-top: 0;
+    border: none;
+  }
+}
