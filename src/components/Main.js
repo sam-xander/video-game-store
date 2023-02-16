@@ -1,10 +1,9 @@
-function Main (){
-    return (
-        <main className="main">
-          <div className="main__wrapper">Main</div>
-        </main>
+function Main() {
+  return (
+    <main className="main">
+      <div className="main__wrapper">{/* PAGE CONTENT */}</div>
+    </main>
+  );
+}
 
-    );
-    }
-    
-    export default Main;
+export default Main;
