@@ -1,3 +1,4 @@
+import {NavLink} from "react-router-dom";
 function Header() {
   return (
     <header className="header">
@@ -8,8 +9,8 @@ function Header() {
           placeholder="Search a game"
         />
         <nav className="header__nav">
-          <a className="header__navLink">WishList</a>
-          <a className="header__navLink">Contact Us</a>
+          <NavLink className="header__navLink"to="/wishlist">WishList</NavLink>
+          <NavLink className="header__navLink"to="/contact">Contact Us</NavLink>
         </nav>
       </div>
     </header>
