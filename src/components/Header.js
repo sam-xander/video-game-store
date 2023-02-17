@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
-import ContactModal from './Contactmodal';
+import ContactModal from './ContactModal';
 
 function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,8 +18,8 @@ function Header() {
           placeholder="Search a game"
         />
         <nav className="header__nav">
-          <a className="header__navLink">WishList</a>
-          <a className="header__navLink">Contact Us</a>
+          <NavLink className="header__navLink"to="/wishlist">WishList</NavLink>
+          <NavLink className="header__navLink" to="#" onClick={toggleModal}>Contact Us</NavLink>
         </nav>
       </div>
       <ContactModal isOpen={isModalOpen} onRequestClose={toggleModal} />
