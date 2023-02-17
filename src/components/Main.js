@@ -4,8 +4,6 @@ import WishList from "../pages/WishList";
 import NotFound from "../pages/NotFound";
 import Test from "../Test";
 
-
-
 function Main() {
   return (
     <main className="main">
@@ -13,9 +11,11 @@ function Main() {
         <Routes>
           <Route path="/" element={<Test />} />
           <Route path="/games/:gameName" element={<GamePage />} />
-          <Route path="/wishlist" element={<WishList />}/> 
-          <Route path="/home" element={<Test />}/>    
-          <Route path="*" element={<NotFound />}/> 
+          <Route path="/wishlist" element={<WishList />} />
+          <Route path="/home" element={<Test />} />
+
+          {/* KEEP Not Found At Bottom */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </main>
