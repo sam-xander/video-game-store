@@ -1,3 +1,4 @@
+import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
 import ContactModal from './Contactmodal';
 
@@ -18,7 +19,7 @@ function Header() {
         />
         <nav className="header__nav">
           <a className="header__navLink">WishList</a>
-          <a className="header__navLink" onClick={toggleModal}>Contact Us</a>
+          <a className="header__navLink">Contact Us</a>
         </nav>
       </div>
       <ContactModal isOpen={isModalOpen} onRequestClose={toggleModal} />
