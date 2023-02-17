@@ -1,11 +1,12 @@
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./GamePage.css";
 
 function GamePage() {
+  const { gameName } = useParams();
   const [game, setGame] = useState(null);
   const [stores, setStores] = useState([]);
   const API_KEY = "afd9ed101fc842cca76630e512009e7f";
-  const gameName = "The Witcher 3: Wild Hunt";
 
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?search=${gameName}&key=${API_KEY}`)
@@ -35,7 +36,7 @@ function GamePage() {
           .catch((error) => console.error(error));
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [gameName]);
 
   if (!game || stores.length === 0) {
     return <div>Loading...</div>;
