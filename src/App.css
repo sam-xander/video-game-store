@@ -72,24 +72,54 @@ h6 {
 
 .sidebar__logo {
   font-size: 1.5rem;
-  height: 80px;
+  height: 70px;
   display: grid;
   place-content: center;
 }
 
 .sidebar__logo span {
-  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  height: 5px;
+  color: #de7755;
 }
 
-.sidebar__logo span:last-child {
-  color: #de7755;
-  font-size: 1.9rem;
+.sidebar__logoIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .sidebar__nav {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+
+.sidebar__nav a {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.sidebar__navIcon {
+  width: 15px;
+  height: 15px;
+}
+
+.sidebar__navLink {
+  width: 200px;
+  padding: 0.5rem 3rem;
+  color: #b6b6b6;
+  border-radius: 8px;
+}
+
+.sidebar__navLink:hover {
+  background-color: #242424;
+}
+
+.sidebar__navLink.active {
+  background-color: #242424;
 }
 
 .content {
@@ -115,6 +145,24 @@ h6 {
   margin: 0 auto;
   transform: translateX(-8px);
   padding: 0 2rem;
+}
+
+.header__search {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 0.9rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+  color: #b6b6b6;
+}
+
+.active {
+  color: var(--text-color);
 }
 
 .main {
@@ -147,4 +195,3 @@ h6 {
   margin: 0 auto;
   padding: 2rem;
 }
-
