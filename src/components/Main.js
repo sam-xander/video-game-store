@@ -6,6 +6,7 @@ import Top from "../pages/Top";
 import Genres from "../pages/Genres";
 import NotFound from "../pages/NotFound";
 import Test from "../Test";
+import GenrePage from "../pages/GenrePage";
 
 function Main() {
   return (
@@ -18,6 +19,7 @@ function Main() {
           <Route path="/new" element={<New />} />
           <Route path="/top" element={<Top />} />
           <Route path="/genres" element={<Genres />} />
+          <Route path="/genres/:genreName" element={<GenrePage />} />
           <Route path="/home" element={<Test />} />
 
           {/* KEEP Not Found At Bottom */}
