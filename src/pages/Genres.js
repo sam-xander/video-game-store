@@ -1,6 +1,6 @@
 function Genres(){
     return (
-        <p>There are the games grouped by genre</p>
+        <p>These are the games grouped by genre</p>
     );
 }
 
