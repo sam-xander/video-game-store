@@ -12,6 +12,7 @@ a.genres__link {
   display: inline-flex;
   justify-content: center;
   transition: filter 100ms;
+  text-align: center;
 }
 
 a.genres__link:hover {
