@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Top() {
   const [topData, setTopData] = useState(null);
-  const API_KEY = "afd9ed101fc842cca76630e512009e7f";
+  const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
 
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?key=${API_KEY}`)
