@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 import React, { useState } from 'react';
-import ContactModal from './ContactModal';
+import ContactModal from './Contactmodal';
 
 function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
