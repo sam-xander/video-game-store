@@ -9,10 +9,13 @@ function ContactModal({ isOpen, onRequestClose }) {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      backgroundColor: '#f9f9f9', // Change the background color here
-      color: '#333', // Change the text color here
-      borderRadius: '8px',
-      padding: '2rem'
+      backgroundColor: '#f9f9f9',
+      color: '#333',
+      borderRadius: '10px',
+      padding: '1rem',
+      maxWidth: '900px', 
+      maxHeight: '60svh', 
+      
     }
   };
 
@@ -39,7 +42,7 @@ function ContactModal({ isOpen, onRequestClose }) {
           </div>
         </form>
       </div>
-      <button onClick={onRequestClose}>Close</button>
+            <button className= 'close-button' onClick={onRequestClose}>Close</button>
     </Modal>
   );
 }
