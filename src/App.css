@@ -195,3 +195,56 @@ h6 {
   margin: 0 auto;
   padding: 2rem;
 }
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 2px solid rgba(230, 230, 230, 0.3);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #de7755;
+}
+
+.form-button, .close-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #de7755;
+  border-radius: 4px;
+  background-color: #de7755;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: transparent;
+  color: #de7755;
+}
+
+.form-button:active {
+  transform: translateY(1px);
+} 
+
+.close-button:hover,
+.close-button:focus {
+  background-color: #d15028;
+}

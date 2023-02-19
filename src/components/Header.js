@@ -1,6 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import React, { useState } from "react";
-import ContactModal from "./ContactModal";
+import ContactModal from "./Contactmodal";
+import Modal from "react-modal";
+
+// Set the app element for react-modal
+Modal.setAppElement(document.body);
 
 function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
