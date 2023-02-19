@@ -1,12 +1,19 @@
+import { RocketLaunchIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 import SidebarNav from "./SidebarNav";
 
 function Sidebar() {
   return (
     <aside className="sidebar">
-      <h1 className="sidebar__logo">
-        <span>PLAYTIME</span>
-        <span>PALACE</span>
-      </h1>
+      <Link to="/">
+        <h1 className="sidebar__logo">
+          PLAYTIME
+          <span>
+            PALACE
+            <RocketLaunchIcon className="sidebar__logoIcon" />
+          </span>
+        </h1>
+      </Link>
       <SidebarNav />
     </aside>
   );
