@@ -2,11 +2,11 @@ function Main() {
   const [width, setwidth] = useState(0);
   const carousel = useRef();
 
-  useEffect(() => {
-    console.log(images);
-    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
-    setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+  // useEffect(() => {
+  //   console.log(images);
+  //   console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
+  //   setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  // }, []);
 
   return (
     <main className="main">
