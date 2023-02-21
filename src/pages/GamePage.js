@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./GamePage.css";
 
-function GamePage() {
+function GamePage({ API_KEY }) {
   const { gameName } = useParams();
   const [game, setGame] = useState(null);
   const [stores, setStores] = useState([]);
-  const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
-
+  // const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
+  console.log(API_KEY);
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?search=${gameName}&key=${API_KEY}`)
       .then((response) => response.json())

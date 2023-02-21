@@ -7,13 +7,16 @@ import Genres from "../pages/Genres";
 import GenrePage from "../pages/GenrePage";
 import NotFound from "../pages/NotFound";
 
-function Main() {
+function Main({ API_KEY }) {
   return (
     <main className="main">
       <div className="main__wrapper">
         <Routes>
           <Route path="/" element={<Test />} />
-          <Route path="/games/:gameName" element={<GamePage />} />
+          <Route
+            path="/games/:gameName"
+            element={<GamePage API_KEY={API_KEY} />}
+          />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/top" element={<Top />} />
           <Route path="/genres" element={<Genres />} />
