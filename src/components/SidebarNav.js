@@ -1,10 +1,5 @@
 import { NavLink } from "react-router-dom";
-import {
-  CalendarIcon,
-  FireIcon,
-  HomeIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/24/solid";
+import { FireIcon, HomeIcon, Squares2X2Icon } from "@heroicons/react/24/solid";
 function SidebarNav() {
   const navigation = [
     {
