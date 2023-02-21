@@ -1,8 +1,3 @@
-import "./Main.css";
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import images from "./images";
-
 function Main() {
   const [width, setwidth] = useState(0);
   const carousel = useRef();
@@ -16,25 +11,19 @@ function Main() {
   return (
     <main className="main">
       <div className="main__wrapper">
-        <motion.div
-          ref={carousel}
-          className="carousel"
-          whileTap={{ cursor: "grabbing" }}
-        >
-          <motion.div
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-            className="inner-carousel"
-          >
-            {images.map((image) => {
-              return (
-                <motion.div className="item" key={image}>
-                  <img src="{image}" alt=""></img>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </motion.div>
+        <Routes>
+          <Route path="/" element={<Test />} />
+          <Route path="/games/:gameName" element={<GamePage />} />
+          <Route path="/wishlist" element={<WishList />} />
+          <Route path="/new" element={<New />} />
+          <Route path="/top" element={<Top />} />
+          <Route path="/genres" element={<Genres />} />
+          <Route path="/genres/:genreName" element={<GenrePage />} />
+          <Route path="/home" element={<Test />} />
+
+          {/* KEEP Not Found At Bottom */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </main>
   );

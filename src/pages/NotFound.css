@@ -1,0 +1,18 @@
+.notFound {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.notFound h2 {
+  color: #de7755;
+  font-size: 1rem;
+}
+.notFound h3 {
+  font-size: 2rem;
+}
+
+.notFound__button {
+  padding: 2rem 0;
+}
