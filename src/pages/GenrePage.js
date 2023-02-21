@@ -14,7 +14,7 @@ function GenrePage() {
         setGenreData(data.results);
         console.log(data.results);
       });
-  }, []);
+  }, [genreName, API_KEY]);
 
   if (!genreData) {
     return <div>Loading...</div>;
