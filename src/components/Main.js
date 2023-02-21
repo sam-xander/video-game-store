@@ -1,13 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import Test from "../Test";
+import GamePage from "../pages/GamePage";
+import WishList from "../pages/WishList";
+import New from "../pages/New";
+import Top from "../pages/Top";
+import Genres from "../pages/Genres";
+import GenrePage from "../pages/GenrePage";
+import NotFound from "../pages/NotFound";
+
 function Main() {
-  const [width, setwidth] = useState(0);
-  const carousel = useRef();
-
-  // useEffect(() => {
-  //   console.log(images);
-  //   console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
-  //   setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, []);
-
   return (
     <main className="main">
       <div className="main__wrapper">
