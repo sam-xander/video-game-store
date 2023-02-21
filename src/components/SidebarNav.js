@@ -13,11 +13,6 @@ function SidebarNav() {
       icon: <HomeIcon className="sidebar__navIcon" />,
     },
     {
-      name: "New",
-      link: "/new",
-      icon: <CalendarIcon className="sidebar__navIcon" />,
-    },
-    {
       name: "Top",
       link: "/top",
       icon: <FireIcon className="sidebar__navIcon" />,
