@@ -19,6 +19,7 @@
 .carousel {
   cursor: grab;
   overflow: hidden;
+  background-color: rgb(43, 163, 159);
 }
 .carousel,
 .inner-carousel {

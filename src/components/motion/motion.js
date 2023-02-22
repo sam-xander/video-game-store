@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import images from "./assets/images";
+import images from "../images.js";
 
 function Motion() {
   const [width, setwidth] = useState(0);
@@ -14,7 +14,6 @@ function Motion() {
 
   return (
     <main className="motion">
-      <div className="motion">{/* PAGE CONTENT */}</div>
       <div className="motion">
         <motion.div
           ref={carousel}
@@ -29,7 +28,7 @@ function Motion() {
             {images.map((image) => {
               return (
                 <motion.div className="item" key={image}>
-                  <img src="{image}" alt=""></img>
+                  <img src={image} alt=""></img>
                 </motion.div>
               );
             })}
