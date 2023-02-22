@@ -1,4 +1,4 @@
-import { Link, NavigationType, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import ContactModal from "./Contactmodal";
 import Modal from "react-modal";
