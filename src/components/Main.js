@@ -6,6 +6,7 @@ import Top from "../pages/Top";
 import Genres from "../pages/Genres";
 import GenrePage from "../pages/GenrePage";
 import NotFound from "../pages/NotFound";
+import Rating from "../pages/Rating";
 
 function Main({ API_KEY }) {
   return (
@@ -21,6 +22,7 @@ function Main({ API_KEY }) {
           <Route path="/top" element={<Top />} />
           <Route path="/genres" element={<Genres />} />
           <Route path="/genres/:genreName" element={<GenrePage />} />
+          <Route path="/rating" element={<Rating />} />
           <Route path="/home" element={<Test />} />
 
           {/* KEEP Not Found At Bottom */}
