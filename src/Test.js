@@ -1,24 +1,16 @@
 // COMPONENT THAT HANDLES RAWG.IO API SEARCH AND MAPS OVER EACH RETURNED GAME
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Test() {
-  const [input, setInput] = useState("");
-  const [data, setData] = useState([]);
+
+function Test( {data}) {
+  // const [input, setInput] = useState("");
+  // const [data, setData] = useState([]);
   const [selectedGame, setSelectedGame] = useState(null);
   const [gameDetails, setGameDetails] = useState(null);
   const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
 
-  function handleChange(e) {
-    setInput(e.target.value);
-  }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    fetch(`https://api.rawg.io/api/games?key=${API_KEY}&search=${input}`)
-      .then((res) => res.json())
-      .then((data) => setData(data.results));
-  }
 
   function handleGameClick(game) {
     setSelectedGame(game);
@@ -29,11 +21,11 @@ function Test() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input onChange={handleChange} value={input} type="text" />
         <button type="submit">Search</button>
-      </form>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+      </form> */}
+      {/* <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {data.map((game) => (
          <button
          style={{
@@ -79,7 +71,26 @@ function Test() {
           <p><strong>Genres:</strong> {gameDetails.genres.map(genre => genre.name).join(', ')}</p>
           <p><strong>Platforms:</strong> {gameDetails.platforms.map(platform => platform.platform.name).join(', ')}</p>
         </div>
-      )}
+      )} */}
+      <div className="genres">
+      {data.map((game) => (
+        <Link
+          className="genres__link"
+          key={game.id}
+          to={`/games/${game.slug}`}
+          style={{
+            background: `url('${game.background_image}')`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundColor: "grey",
+            backgroundBlendMode: "multiply",
+          }}
+        >
+          {game.name}
+        </Link>
+      ))}
+    </div>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { Route, Routes } from "react-router-dom";
 import Test from "../Test";
 import GamePage from "../pages/GamePage";
@@ -8,12 +9,14 @@ import GenrePage from "../pages/GenrePage";
 import NotFound from "../pages/NotFound";
 import Rating from "../pages/Rating";
 
-function Main({ API_KEY }) {
+function Main({ API_KEY, data }) {
+
   return (
     <main className="main">
       <div className="main__wrapper">
         <Routes>
-          <Route path="/" element={<Test />} />
+          <Route path="/" element={<NotFound/>} />
+          <Route path="/search" element={<Test data={data}/>}/>
           <Route
             path="/games/:gameName"
             element={<GamePage API_KEY={API_KEY} />}
