@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import ContactModal from "./Contactmodal";
 import Modal from "react-modal";
+import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 
 // Set the app element for react-modal
 Modal.setAppElement(document.body);
@@ -16,6 +17,15 @@ function Header() {
   return (
     <header className="header">
       <div className="header__wrapper">
+        <Link className="header__logo" to="/">
+          <h1 className="sidebar__logo">
+            PLAYTIME
+            <span>
+              PALACE
+              <RocketLaunchIcon className="sidebar__logoIcon" />
+            </span>
+          </h1>
+        </Link>
         <input
           className="header__search"
           type="text"
@@ -33,6 +43,7 @@ function Header() {
             Contact Us
           </Link>
         </nav>
+        <button></button>
       </div>
       <ContactModal isOpen={isModalOpen} onRequestClose={toggleModal} />
     </header>

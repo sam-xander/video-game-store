@@ -147,6 +147,10 @@ h6 {
   padding: 0 2rem;
 }
 
+a.header__logo {
+  display: none;
+}
+
 .header__search {
   padding: 0.5rem 1rem;
   border: none;
@@ -222,7 +226,8 @@ h6 {
   border-color: #de7755;
 }
 
-.form-button, .close-button {
+.form-button,
+.close-button {
   display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -242,9 +247,24 @@ h6 {
 
 .form-button:active {
   transform: translateY(1px);
-} 
+}
 
 .close-button:hover,
 .close-button:focus {
   background-color: #d15028;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    margin-left: 0;
+  }
+  a.header__logo {
+    display: block;
+  }
+  .header__nav {
+    display: none;
+  }
 }
