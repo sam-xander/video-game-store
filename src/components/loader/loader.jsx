@@ -1,32 +1,31 @@
-// import React from "react";
-// import {useState} from "react";
-// import { css } from "@emotion/react";
-// import ClipLoader from "react-spinners/ClipLoader";
-// import {PacmanLoader} from 'react-spinners'
+import React from "react";
+import {useState} from "react";
+import { css } from "@emotion/react";
+import 'loaders.css'
+import {PacmanLoader} from 'react-spinners'
 
 
 
-// const override  =css` {
-//     display: "block",
-//     margin: "0 auto",
-//     borderColor: "red",
-//   }`;
+const override  =css` {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  }`;
 
 
-// function Loader(){
-//     const [loading, setLoading] = useState(false);
+function Loader(){
+    const [loading, setLoading] = useState(false);
 
 
-// return(
-//     <div className="sweet-loading">
-//         <button onClick={()=> setLoading(!loading)}>Toggle Loader</button>
-   
-//         <ClipLoader color='ffff' Loading={loading} css={override} size={150}/>
-// <PacmanLoader color="#ffff"  Loading={loading} css={override} size={15}/>
+return(
+    <div className="sweet-loading">
+        
+       
+<PacmanLoader color="#de7755"  Loading={loading} css={override} size={25} margin={2} />
 
-//     </div>
-// )
+    </div>
+)
 
-// }
+}
 
-// export default Loader
+export default Loader

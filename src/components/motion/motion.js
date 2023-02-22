@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import images from "../images.js";
+import "./motion.css";
 
 function Motion() {
   const [width, setwidth] = useState(0);

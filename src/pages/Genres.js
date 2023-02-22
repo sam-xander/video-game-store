@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Genres.css";
+import Loader from "../components/loader/loader";
 
 function Genres() {
   const [genres, setGenres] = useState(null);
@@ -16,7 +17,11 @@ function Genres() {
   }, []);
 
   if (!genres) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   return (

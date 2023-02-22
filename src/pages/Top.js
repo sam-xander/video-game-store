@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../components/loader/loader";
 
 function Top() {
   const [topData, setTopData] = useState(null);
@@ -15,7 +16,11 @@ function Top() {
   }, []);
 
   if (!topData) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   return (
