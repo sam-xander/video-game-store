@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { FireIcon, HomeIcon, Squares2X2Icon } from "@heroicons/react/24/solid";
+import {
+  FireIcon,
+  HomeIcon,
+  Squares2X2Icon,
+  StarIcon,
+} from "@heroicons/react/24/solid";
 function SidebarNav() {
   const navigation = [
     {
@@ -8,7 +13,7 @@ function SidebarNav() {
       icon: <HomeIcon className="sidebar__navIcon" />,
     },
     {
-      name: "Top",
+      name: "Popular",
       link: "/top",
       icon: <FireIcon className="sidebar__navIcon" />,
     },
@@ -16,6 +21,11 @@ function SidebarNav() {
       name: "Genres",
       link: "/genres",
       icon: <Squares2X2Icon className="sidebar__navIcon" />,
+    },
+    {
+      name: "Top Rated",
+      link: "/rating",
+      icon: <StarIcon className="sidebar__navIcon" />,
     },
   ];
 
