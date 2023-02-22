@@ -222,7 +222,8 @@ h6 {
   border-color: #de7755;
 }
 
-.form-button, .close-button {
+.form-button,
+.close-button {
   display: inline-block;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -242,7 +243,7 @@ h6 {
 
 .form-button:active {
   transform: translateY(1px);
-} 
+}
 
 .close-button:hover,
 .close-button:focus {
