@@ -10,7 +10,6 @@ function Top() {
       .then((response) => response.json())
       .then((data) => {
         setTopData(data.results);
-        console.log(data.results);
       });
   }, []);
 

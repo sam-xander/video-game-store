@@ -1,0 +1,16 @@
+a.home__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+a.home__title p {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.8;
+}
+a.home__title p svg {
+  height: 20px;
+  width: 20px;
+}
