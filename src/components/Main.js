@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFound";
 import Rating from "../pages/Rating";
 import { useEffect, useState } from "react";
 import Wishlist from "../pages/WishList";
+import Home from "../pages/Home";
 
 function Main({ API_KEY, data }) {
   const [wishlist, setWishlist] = useState([]);
@@ -42,7 +43,7 @@ function Main({ API_KEY, data }) {
     <main className="main">
       <div className="main__wrapper">
         <Routes>
-          <Route path="/" element={<NotFound />} />
+          <Route path="/" element={<Home API_KEY={API_KEY} />} />
           <Route path="/search" element={<Test data={data} />} />
           <Route
             path="/games/:gameName"
