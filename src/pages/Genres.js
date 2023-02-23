@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Genres.css";
 
-function Genres() {
+function Genres({ API_KEY }) {
   const [genres, setGenres] = useState(null);
-  const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
 
   useEffect(() => {
     fetch(`https://api.rawg.io/api/genres?key=${API_KEY}`)
@@ -13,7 +12,7 @@ function Genres() {
         setGenres(data.results);
         console.log(data.results);
       });
-  }, []);
+  }, [API_KEY]);
 
   if (!genres) {
     return <div>Loading...</div>;

@@ -36,7 +36,7 @@ function SidebarNav() {
           key={item.name}
           to={item.link}
           className="sidebar__navLink"
-          activeClassName="active"
+          activeclassname="active"
         >
           {item.icon}
           {item.name}

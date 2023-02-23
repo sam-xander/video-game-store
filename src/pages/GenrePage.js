@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./Genres.css";
 
-function GenrePage() {
+function GenrePage({ API_KEY }) {
   const { genreName } = useParams();
   const [genreData, setGenreData] = useState(null);
-  const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
 
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?key=${API_KEY}&genres=${genreName}`)

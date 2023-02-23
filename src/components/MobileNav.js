@@ -5,11 +5,12 @@ import {
   Squares2X2Icon,
   StarIcon,
   XMarkIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import "./MobileNav.css";
 
-function MobileNav({ toggleMenu }) {
+function MobileNav({ toggleMenu, handleChange, handleSubmit, userInput }) {
   const navigation = [
     {
       name: "Home",
@@ -31,6 +32,11 @@ function MobileNav({ toggleMenu }) {
       link: "/rating",
       icon: <StarIcon className="sidebar__navIcon" />,
     },
+    {
+      name: "Wishlist",
+      link: "/wishlist",
+      icon: <SparklesIcon className="sidebar__navIcon" />,
+    },
   ];
 
   return (
@@ -47,6 +53,15 @@ function MobileNav({ toggleMenu }) {
         </Link>
         <XMarkIcon onClick={toggleMenu} className="mobileNav__icon" />
       </div>
+      <form className="mobileNav__form" onSubmit={handleSubmit}>
+        <input
+          onChange={handleChange}
+          value={userInput}
+          className="header__search"
+          type="text"
+          placeholder="Search a game"
+        />
+      </form>
       <nav className="mobileNav__nav">
         {navigation.map((item) => (
           <Link
