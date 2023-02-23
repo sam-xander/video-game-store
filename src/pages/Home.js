@@ -77,7 +77,7 @@ function Home({ API_KEY }) {
             <Link
               className="genres__link"
               key={genre.id}
-              to={genre.slug}
+              to={`genres/${genre.slug}`}
               style={{
                 background: `url('${genre.image_background}')`,
                 backgroundRepeat: "no-repeat",
