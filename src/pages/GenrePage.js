@@ -26,7 +26,7 @@ function GenrePage() {
         <Link
           className="genres__link"
           key={genre.id}
-          to={`/games/${genre.slug}`}
+          to={`/games/${genre.name}`}
           style={{
             background: `url('${genre.background_image}')`,
             backgroundRepeat: "no-repeat",

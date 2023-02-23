@@ -2,7 +2,14 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./GamePage.css";
 
-function GamePage({ API_KEY }) {
+function GamePage({
+  API_KEY,
+  addToWishlist,
+  wishlist,
+  isInWishlist,
+  setIsInWishlist,
+  removeFromWishlist,
+}) {
   const { gameName } = useParams();
   const [game, setGame] = useState(null);
   const [stores, setStores] = useState([]);
@@ -21,6 +28,14 @@ function GamePage({ API_KEY }) {
             // Set the game state with the full game data
             setGame(data);
 
+            // Check if the game is in the wishlist
+            const gameInWishlist = wishlist.find((item) => item.id === data.id);
+            if (gameInWishlist) {
+              setIsInWishlist(true);
+            } else {
+              setIsInWishlist(false);
+            }
+
             // Fetch the store data for the game
             fetch(
               `https://api.rawg.io/api/games/${gameId}/stores?key=${API_KEY}`
@@ -35,13 +50,11 @@ function GamePage({ API_KEY }) {
           .catch((error) => console.error(error));
       })
       .catch((error) => console.error(error));
-  }, [gameName, API_KEY]);
+  }, [gameName, API_KEY, wishlist, setIsInWishlist]);
 
   if (!game || stores.length === 0) {
     return <div>Loading...</div>;
   }
-
-  console.log(game, stores);
 
   return (
     <>
@@ -57,7 +70,18 @@ function GamePage({ API_KEY }) {
           <p>{game.description_raw}</p>
         </div>
         <div className="game__info">
-          <button className="button">Wishlist</button>
+          {isInWishlist ? (
+            <button
+              className="button"
+              onClick={() => removeFromWishlist(game.id)}
+            >
+              Remove from Wishlist
+            </button>
+          ) : (
+            <button className="button" onClick={() => addToWishlist(game)}>
+              Add to Wishlist
+            </button>
+          )}
           <h4 className="game__infoItem">Platforms</h4>
           <p>
             {game.platforms

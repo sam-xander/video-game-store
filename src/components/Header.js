@@ -6,10 +6,10 @@ import Modal from "react-modal";
 // Set the app element for react-modal
 Modal.setAppElement(document.body);
 
-function Header({ userInput, setUserInput, setData}) {
+function Header({ userInput, setUserInput, setData }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   function handleChange(e) {
     setUserInput(e.target.value);
   }
@@ -20,7 +20,7 @@ function Header({ userInput, setUserInput, setData}) {
     fetch(`https://api.rawg.io/api/games?key=${API_KEY}&search=${userInput}`)
       .then((res) => res.json())
       .then((data) => setData(data.results));
-      navigate('/search')
+    navigate("/search");
   }
   function toggleModal() {
     setIsModalOpen(!isModalOpen);
@@ -30,13 +30,13 @@ function Header({ userInput, setUserInput, setData}) {
     <header className="header">
       <div className="header__wrapper">
         <form onSubmit={handleSubmit}>
-        <input
-        onChange={handleChange}
-        value={userInput}
-          className="header__search"
-          type="text"
-          placeholder="Search a game"
-        />
+          <input
+            onChange={handleChange}
+            value={userInput}
+            className="header__search"
+            type="text"
+            placeholder="Search a game"
+          />
         </form>
         <nav className="header__nav">
           <NavLink

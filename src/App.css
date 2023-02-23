@@ -143,7 +143,6 @@ h6 {
   height: 100%;
   max-width: 60rem;
   margin: 0 auto;
-  transform: translateX(-8px);
   padding: 0 2rem;
 }
 
@@ -163,6 +162,19 @@ h6 {
 
 .active {
   color: var(--text-color);
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main {
@@ -197,7 +209,7 @@ h6 {
 }
 
 .form-group {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .form-label {
@@ -222,29 +234,42 @@ h6 {
   border-color: #de7755;
 }
 
-.form-button, .close-button {
+.form-button,
+.close-button {
   display: inline-block;
-  padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 2px solid #de7755;
+  border: 2px solid transparent;
   border-radius: 4px;
-  background-color: #de7755;
   color: var(--text-color);
   cursor: pointer;
+  margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
+}
+.form-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #de7755;
+}
+.close-button {
+  width: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 50px;
+  background-color: transparent;
 }
 
 .form-button:hover,
 .form-button:focus {
   background-color: transparent;
   color: #de7755;
+  border: 2px solid #de7755;
 }
 
 .form-button:active {
   transform: translateY(1px);
-} 
+}
 
 .close-button:hover,
 .close-button:focus {
-  background-color: #d15028;
+  background-color: #de7755;
 }
