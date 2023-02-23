@@ -27,11 +27,16 @@ function ContactModal({ isOpen, onRequestClose }) {
     >
       <h2>Contact Us</h2>
       <p>Fill out the form below to get in touch with us.</p>
-      <form>
+      <form action="https://api.web3forms.com/submit" method="POST">
         <div className="form-group">
           <label className="form-label" for="name">
             Name
           </label>
+          <input 
+          type="hidden" 
+          name="access_key" 
+          value="8eecbd8c-6d3a-48e7-9f5a-41743b16b729">
+          </input>
           <input
             className="form-input"
             type="text"
@@ -63,7 +68,9 @@ function ContactModal({ isOpen, onRequestClose }) {
             name="message"
             required
           ></textarea>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success"></input>
         </div>
+        
         <button className="form-button" type="submit">
           Send
         </button>
