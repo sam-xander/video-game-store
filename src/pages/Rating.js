@@ -24,7 +24,7 @@ function Rating() {
         <Link
           className="genres__link"
           key={game.id}
-          to={`/games/${game.slug}`}
+          to={`/games/${game.name}`}
           style={{
             background: `url('${game.background_image}')`,
             backgroundRepeat: "no-repeat",

@@ -52,9 +52,10 @@ a {
 }
 
 .game__info {
-  display: grid;
-  min-width: 250px;
-  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 300px;
   padding: 0 2rem;
   margin: 2rem 0;
   border-left: 1px solid rgba(230, 230, 230, 0.05);
