@@ -52,7 +52,7 @@ function GamePage({
       .catch((error) => console.error(error));
   }, [gameName, API_KEY, wishlist, setIsInWishlist]);
 
-  if (!game || stores.length === 0) {
+  if (!game) {
     return <div>Loading...</div>;
   }
 
@@ -88,27 +88,35 @@ function GamePage({
               .map((platform) => platform.platform.name)
               .join(", ")}
           </p>
-          <h4 className="game__infoItem">Links</h4>
-          <ul>
-            {stores.map((store) => {
-              // Checks the different stores arrays for a match and other stores whose slugs are formatted wrong
-              const matchingStore = game.stores.find(
-                (item) =>
-                  store.url.includes(item.store.slug) ||
-                  (item.store.slug === "playstation-store" &&
-                    store.url.includes("store.playstation.com")) ||
-                  (item.store.slug === "xbox-store" &&
-                    store.url.includes("microsoft.com"))
-              );
-              return (
-                <li key={store.id}>
-                  <a href={store.url} target="_blank" rel="noopener noreferrer">
-                    {matchingStore && matchingStore.store.name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          {!stores.length === 0 && (
+            <>
+              <h4 className="game__infoItem">Links</h4>
+              <ul>
+                {stores.map((store) => {
+                  // Checks the different stores arrays for a match and other stores whose slugs are formatted wrong
+                  const matchingStore = game.stores.find(
+                    (item) =>
+                      store.url.includes(item.store.slug) ||
+                      (item.store.slug === "playstation-store" &&
+                        store.url.includes("store.playstation.com")) ||
+                      (item.store.slug === "xbox-store" &&
+                        store.url.includes("microsoft.com"))
+                  );
+                  return (
+                    <li key={store.id}>
+                      <a
+                        href={store.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {matchingStore && matchingStore.store.name}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          )}
           <h4 className="game__infoItem">Tags</h4>
           <p>
             {game.tags
