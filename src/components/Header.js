@@ -2,11 +2,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import ContactModal from "./Contactmodal";
 import Modal from "react-modal";
+import { RocketLaunchIcon, Bars2Icon } from "@heroicons/react/24/solid";
 
 // Set the app element for react-modal
 Modal.setAppElement(document.body);
 
-function Header({ userInput, setUserInput, setData }) {
+function Header({ userInput, setUserInput, setData, isMenuOpen, toggleMenu }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
   const navigate = useNavigate();
@@ -29,7 +30,16 @@ function Header({ userInput, setUserInput, setData }) {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <form onSubmit={handleSubmit}>
+        <Link className="header__logo" to="/">
+          <h1 className="sidebar__logo">
+            PLAYTIME
+            <span>
+              PALACE
+              <RocketLaunchIcon className="sidebar__logoIcon" />
+            </span>
+          </h1>
+        </Link>
+        <form className="header__form" onSubmit={handleSubmit}>
           <input
             onChange={handleChange}
             value={userInput}
@@ -50,6 +60,10 @@ function Header({ userInput, setUserInput, setData }) {
             Contact Us
           </Link>
         </nav>
+
+        {isMenuOpen === false && (
+          <Bars2Icon onClick={toggleMenu} className="header__menuIcon" />
+        )}
       </div>
       <ContactModal isOpen={isModalOpen} onRequestClose={toggleModal} />
     </header>

@@ -7,7 +7,7 @@ import GenrePage from "../pages/GenrePage";
 import NotFound from "../pages/NotFound";
 import Rating from "../pages/Rating";
 import { useEffect, useState } from "react";
-import Wishlist from "../pages/Wishlist";
+import Wishlist from "../pages/WishList";
 
 function Main({ API_KEY, data }) {
   const [wishlist, setWishlist] = useState([]);

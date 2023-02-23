@@ -18,3 +18,9 @@ a.genres__link {
 a.genres__link:hover {
   filter: brightness(1.2);
 }
+
+@media (max-width: 900px) {
+  .genres {
+    grid-template-columns: 1fr;
+  }
+}
