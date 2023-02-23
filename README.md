@@ -1,11 +1,15 @@
 # Video Game Search and Wishlist Website
 
+### View Project [here](https://playtime-palace.netlify.app/)
+
 This is a website built with React that allows users to search for different video games using the RAWG.io API and create a wishlist of games that they want to play.
+
+![image](https://user-images.githubusercontent.com/99209307/221034976-ae4a10a6-fe0d-4888-a7cd-a1fc08e98cf4.png)
 
 ## Features
 
 - Search for video games by name using the RAWG.io API
-- View detailed information about each game, including its title, release date, platforms, and rating
+- View detailed information about each game, including its title, release date, platforms, and links
 - Add games to a wishlist that is saved locally on the user's device
 - View the user's wishlist and remove games from it
 - Routing implemented with React Router
@@ -27,7 +31,4 @@ To run this website locally, you will need to have Node.js and npm installed on 
 - React Router
 - Heroicons
 - Create React App
-
-## Credits
-
-Icons used throughout the website are provided by Heroicons.
+- React Modal
