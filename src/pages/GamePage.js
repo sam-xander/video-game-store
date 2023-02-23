@@ -88,7 +88,7 @@ function GamePage({
               .map((platform) => platform.platform.name)
               .join(", ")}
           </p>
-          {!stores.length === 0 && (
+          {stores.length > 0 && (
             <>
               <h4 className="game__infoItem">Links</h4>
               <ul>
