@@ -32,3 +32,4 @@ To run this website locally, you will need to have Node.js and npm installed on 
 - Heroicons
 - Create React App
 - React Modal
+- Web3Forms contact form
