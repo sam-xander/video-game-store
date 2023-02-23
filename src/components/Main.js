@@ -60,11 +60,13 @@ function Main({ API_KEY, data }) {
             }
           />
           <Route path="/wishlist" element={<Wishlist wishlist={wishlist} />} />
-          <Route path="/top" element={<Top />} />
-          <Route path="/genres" element={<Genres />} />
-          <Route path="/genres/:genreName" element={<GenrePage />} />
-          <Route path="/rating" element={<Rating />} />
-          <Route path="/home" element={<Test />} />
+          <Route path="/top" element={<Top API_KEY={API_KEY} />} />
+          <Route path="/genres" element={<Genres API_KEY={API_KEY} />} />
+          <Route
+            path="/genres/:genreName"
+            element={<GenrePage API_KEY={API_KEY} />}
+          />
+          <Route path="/rating" element={<Rating API_KEY={API_KEY} />} />
 
           {/* KEEP Not Found At Bottom */}
           <Route path="*" element={<NotFound />} />

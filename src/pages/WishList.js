@@ -5,7 +5,14 @@ function Wishlist({ wishlist }) {
   return (
     <div>
       {wishlist.length === 0 ? (
-        <h2 style={{ textAlign: "center" }}>Your wishlist is empty.</h2>
+        <div style={{ textAlign: "center" }}>
+          <h2>Your wishlist is empty.</h2>
+          <div className="notFound__button">
+            <Link to="/">
+              <p>Back To Home</p>
+            </Link>
+          </div>
+        </div>
       ) : (
         <div className="genres">
           {wishlist.map((genre) => (

@@ -13,7 +13,6 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  transform: translateX(-8px);
 }
 
 .mobileNav__icon {
@@ -28,11 +27,18 @@
   background: #343434;
 }
 
+.mobileNav__form input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
 .mobileNav__nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   height: 70%;
 }
@@ -41,7 +47,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   gap: 1rem;
   width: 100%;
   padding: 0.5rem 3rem;

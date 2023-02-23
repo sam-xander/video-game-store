@@ -154,9 +154,21 @@ a.header__logo {
 .header__search {
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   width: 300px;
   font-size: 0.9rem;
+}
+
+.header__button {
+  border: none;
+  height: 37.58px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 0.8rem;
+  background-color: #de7755;
+  color: #e6e6e6;
+  padding: 0 20px;
 }
 
 .header__nav {

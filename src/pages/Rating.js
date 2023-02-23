@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function Rating() {
+function Rating({ API_KEY }) {
   const [ratingData, setRatingData] = useState(null);
-  const API_KEY = "6d6f10f340174b0689ca620ab0119ffb";
 
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?key=${API_KEY}&ordering=-rating`)
@@ -12,7 +11,7 @@ function Rating() {
         setRatingData(data.results);
         console.log(data.results);
       });
-  }, []);
+  }, [API_KEY]);
 
   if (!ratingData) {
     return <div>Loading...</div>;
