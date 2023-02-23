@@ -7,11 +7,11 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   const [API_KEY] = useState(process.env.REACT_APP_API_KEY);
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // function toggleMenu() {
-  //   setIsMenuOpen(!isMenuOpen);
-  // }
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   const [userInput, setUserInput] = useState("");
   const [data, setData] = useState([]);
@@ -25,9 +25,12 @@ function App() {
           userInput={userInput}
           setUserInput={setUserInput}
           setData={setData}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
         />
         <Main API_KEY={API_KEY} data={data} />
       </div>
+      {isMenuOpen && <MobileNav toggleMenu={toggleMenu} />}
     </div>
   );
 }

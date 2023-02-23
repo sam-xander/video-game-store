@@ -56,6 +56,7 @@ h6 {
 .wrapper {
   display: flex;
   height: 100%;
+  position: relative;
 }
 
 .sidebar {
@@ -165,14 +166,19 @@ a.header__logo {
   color: #b6b6b6;
 }
 
+.header__menuIcon {
+  display: none;
+}
+
 .active {
   color: var(--text-color);
 }
 
 .main {
-  border: 1px solid rgba(230, 230, 230, 0.05);
+  border-left: 1px solid rgba(230, 230, 230, 0.05);
+  border-top: 1px solid rgba(230, 230, 230, 0.05);
   height: calc(100svh - 80px);
-  border-radius: 16px;
+  border-top-left-radius: 16px;
   overflow: auto;
 }
 
@@ -261,10 +267,29 @@ a.header__logo {
   .content {
     margin-left: 0;
   }
+  .main {
+    border-top-left-radius: 0;
+  }
   a.header__logo {
     display: block;
+    transform: translateY(-8px);
+  }
+  .header__form {
+    display: none;
   }
   .header__nav {
     display: none;
   }
+  .header__menuIcon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .header__menuIcon:hover {
+    background: #242424;
+  }
+  
 }
